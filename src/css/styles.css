@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --font-family: Lato, sans-serif;
+    --primary-color: #f1f1f1;
+    --primary-color-dark: #141414;
+    --secondary-color: #eeeeee;
+    --text-dark: #141414;
+    --text-light: #f1f1f1;
+    --extra-light: #f9f9f9;
+    --accent-color: #21cb62;
+    --max-width: 1200px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color-dark);
+    z-index: 1;
+}
+
+.nav_content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+nav .checkbox,
+nav input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: left 0.5s;
+}
+
+nav ul li a {
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: 0.5s;
+}
+
+nav ul li a:hover {
+    border-top-color: var(--primary-color-dark);
+    border-bottom-color: var(--primary-color-dark);
+}
+
+main {
+    background-color: var(--extra-light);
+    /* max-width: var(--max-width); */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    margin: auto;
+    gap: 1rem;
+}
+
+.hero .content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.hero .sub-title {
+    font-family: Inter, sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+.hero .sub-title span {
+    color: var(--accent-color);
+}
+
+.hero .content .link_btns {
+    display: flex;
+    gap: 0px 20px;
+    font-size: 1.5rem;
+}
+
+.hero .content .link_btns ul li {
+    background-color: black;
+    border-radius: 50%;
+    color: var(--extra-light);
+    padding: 5px;
+}
+
+.hero .content .link_btns button {
+    padding: 5px 10px;
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    color: var(--extra-light);
+}
+
+.hero img {
+    transform: scaleX(-1);
+    height: 300px;
+}
+
+.hero .content .sub-title {
+    font-family: 200;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero .subtitle {
+    letter-spacing: 2px;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row-reverse;
+    padding: 0px 100px;
+    background-color: var(--secondary-color);
+    border: 1px solid red;
+}
+
+.experience h2 {
+    margin-bottom: 40px;
+    justify-self: flex-start;
+}
+
+.experience .tech-stack {
+    width: 60%;
+}
+
+.experience .content {
+    width: 40%;
+    letter-spacing: 2px;
+    font-weight: 300;
+    height: 385px;
+}
+
+.experience .tech-stack img {
+    height: 80px;
+    width: auto;
+}
+
+.experience .content,
+.experience .tech-stack {
+    padding: 20px;
+}
+
+.featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px 0;
+    padding: 20px 50px;
+}
+
+.featured h2,
+.projects h2,
+.contact h2 {
+    letter-spacing: 3px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.featured > p,
+.projects > p,
+.contact > p {
+    color: var(--accent-color);
+}
+
+.featured .project {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: rgba(220, 220, 220, 0.384);
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.featured .project img {
+    width: 60%;
+}
+
+.featured .project .content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    gap: 5px;
+    width: 40%;
+    padding-left: 30px;
+}
+
+.featured .project .content .title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.featured .project .content .sub-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.featured .project .content .details {
+    margin: 20px 0;
+    letter-spacing: 2px;
+    line-height: 25px;
+    width: 100%;
+}
+
+.featured .project .content ul li {
+    font-size: 1.2rem;
+    background-color: gainsboro;
+    padding: 5px 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.featured .project .content button {
+    background-color: var(--accent-color);
+    padding: 10px 15px;
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 150px;
+    cursor: pointer;
+}
+
+.projects {
+    height: 100vh;
+    padding: 20px 50px;
+    background-color: var(--secondary-color);
+}
+
+.projects div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.projects div img {
+    width: 32%;
+}
+
+.contact {
+    padding: 20px 50px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.contact .details {
+    font-size: 1.3rem;
+}
+
+.contact .details p {
+    width: 70%;
+    margin: 10px auto;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.contact .details ul {
+    margin-top: 15px;
+    padding: 20px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .details #email {
+    background-color: var(--accent-color);
+    padding: 10px 15px;
+    border: 15px;
+}
+
+.contact .details #message {
+    background-color: rgba(220, 220, 220, 0.904);
+    padding: 10px 15px;
+    border: 15px;
+    color: var(--text-dark);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+@media (max-width: 1020px) {
+    .featured {
+        font-size: 0.8rem;
+        padding: 20px 10px;
+    }
+
+    .featured .project {
+        gap: 5px;
+        padding: 5px 0;
+
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .featured .project .content ul li {
+        font-size: 1rem;
+        padding: 0;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .featured .project .content button {
+        background-color: var(--accent-color);
+        padding: 5px 10px;
+        color: var(--primary-color);
+        font-size: 1rem;
+        width: 120px;
+        cursor: pointer;
+    }
+
+    .projects {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav .checkbox {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        height: calc(100vh - 85px);
+        left: -100%;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+        color: var(--text-dark);
+    }
+
+    .hero {
+        flex-flow: wrap column;
+    }
+
+    .hero .content .link_btns {
+        display: flex;
+        gap: 0px 20px;
+        font-size: 1.5rem;
+    }
+
+    .experience {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .experience .tech-stack,
+    .experience .content {
+        width: 100%;
+    }
+
+    .experience .content {
+        height: 200px;
+    }
+
+    .featured .project {
+        flex-flow: wrap row;
+    }
+
+    .featured .project img {
+        width: 100%;
+    }
+
+    .featured .project .content {
+        padding: 5px;
+        width: 100%;
+    }
+
+    .projects div img {
+        width: 45%;
+    }
+
+    .contact .details p {
+        width: 100%;
+    }
+
+    .contact .details ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
