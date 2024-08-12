@@ -177,7 +177,6 @@ h1 {
     flex-direction: row-reverse;
     padding: 0px 100px;
     background-color: var(--secondary-color);
-    border: 1px solid red;
 }
 
 .experience h2 {
@@ -364,7 +363,7 @@ footer p {
     padding: 10px;
 }
 
-@media (max-width: 1020px) {
+@media only screen and (max-width: 1020px) {
     .featured {
         font-size: 0.8rem;
         padding: 20px 10px;
@@ -399,7 +398,7 @@ footer p {
     }
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     nav .checkbox {
         display: block;
     }
@@ -429,6 +428,10 @@ footer p {
         flex-flow: wrap column;
     }
 
+    .hero img {
+        transform: scaleX(1);
+        height: 250px;
+    }
     .hero .content .link_btns {
         display: flex;
         gap: 0px 20px;
